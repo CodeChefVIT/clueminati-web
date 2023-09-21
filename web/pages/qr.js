@@ -7,9 +7,9 @@ import Image from "next/image";
 function QRScanner() {
   const [qrData, setQrData] = useState("");
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const userUid = localStorage.getItem("uid");
 
   useEffect(() => {
+    const userUid = localStorage.getItem("uid");
     if (!userUid) {
       Router.push("/login");
       return;
